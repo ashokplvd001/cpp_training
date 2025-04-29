@@ -34,18 +34,10 @@ void problem4()
 
 int problem4Fun(long long int num, int digit)
 {
-	int count = 0 ; 
-	//XXXXXXXXXXXXXXXXXXXX
 
-	if( num == 0 )
-		return 0
-	while (num)
-	{
-		if (digit == num % 10)
-		{
-			count++;
-		}
-		num /= 10; 
-	}
-	return count;
+	if (num == 0)
+		return 0;
+
+	return !((num % 10) ^ digit) + problem4Fun(num/10, digit);
+		
 }

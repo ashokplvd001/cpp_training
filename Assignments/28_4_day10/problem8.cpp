@@ -8,14 +8,14 @@ Vesrion : 0.1
 
 
 #include <iostream>
-int problem8Fun(int);
+int problem8Fun(long long int);
 
 using namespace std;	// using name space to use "cout" and "cin" 
 
 void problem8()
 {
 	cout << "hi , this is second last digit in number\n";
-	int num;
+	long long int num;
 	cout << "Enter the number : ";
 	cin >> num;
 
@@ -23,7 +23,7 @@ void problem8()
 	cout << "The second last digit in number " << num << " is : " << res << endl;
 }
 
-int problem8Fun(int num)
+int problem8Fun( long long int num)
 {
 	num /= 10; 
 	return num % 10; 

@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>2131</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,6 +131,11 @@
     <ClCompile Include="arrayFun1.cpp" />
     <ClCompile Include="arrayFun2.cpp" />
     <ClCompile Include="arrayFun3.cpp" />
+    <ClCompile Include="arrayFun4.cpp" />
+    <ClCompile Include="arrayFun5.cpp" />
+    <ClCompile Include="arrayFun6.cpp" />
+    <ClCompile Include="arrayFun7.cpp" />
+    <ClCompile Include="arrayFun8.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
