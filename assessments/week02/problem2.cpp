@@ -19,27 +19,78 @@ int main()
 	cout << "Enter the number : ";
 	cin >> number; 
 
-	long int tempNumber = 0;		// to copy the original number for every inner iteration 
-	int iter = 0; // to run the loop for 10 times as digits are 0-10 decimal number digits 
+
 	int res = 0;	// to get the each digit and to compare with iter . 
-	int	count;
+	int	count0 = 0 ;
+	int count1 = 0; 
+	int	count2 = 0;
+	int count3 = 0;
+	int	count4 = 0;
+	int count5 = 0;
+	int	count6 = 0;
+	int count7 = 0;
+	int	count8 = 0;
+	int count9 = 0;
+
 
 	cout << "Digit frequencies:" << endl;
 
-	while (iter < 10)
+
+	while (number)
 	{
-		tempNumber = number; // copy the actual number for every iteration 
-		count = 0;
-		while ( tempNumber != 0 )
+		res = number % 10; 
+
+		switch (res)
 		{
-			res = tempNumber % 10; 
-			if ( res == iter )	// if the digit is matching with the iter then count increment
-				count++;
-			tempNumber /= 10 ; 
+		case 0 : 
+			count0++;
+			break; 
+		case 1:
+			count1++;
+			break;
+		case 2:
+			count2++;
+			break;
+		case 3:
+			count3++;
+			break;
+		case 4:
+			count4++;
+			break;
+		case 5:
+			count5++;
+			break;
+		case 6:
+			count6++;
+			break;
+		case 7:
+			count7++;
+			break;
+		case 8:
+			count8++;
+			break;
+		case 9:
+			count9++;
+			break;
 		}
-		cout << iter << ": " << count<<endl;
-		iter++;
+		number /= 10; 
 	}
+
+	cout << "0 : " << count0 << endl;
+	cout << "1 : " << count1 << endl;
+	cout << "2 : " << count2 << endl;
+	cout << "3 : " << count3 << endl;
+	cout << "4 : " << count4 << endl;
+	cout << "5 : " << count5 << endl;
+	cout << "6 : " << count6 << endl;
+	cout << "7 : " << count7 << endl;
+	cout << "8 : " << count8 << endl;
+	cout << "9 : " << count9 << endl;
+
+
+	
+
+
 }
 
 
