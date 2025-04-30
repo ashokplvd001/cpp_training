@@ -13,7 +13,7 @@ using namespace std;	// using name space to use "cout" and "cin"
 
 int main()
 {
-	int opt = 2;
+	int opt = 3;
 
 	switch (opt)
 	{

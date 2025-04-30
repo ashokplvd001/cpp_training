@@ -11,6 +11,76 @@ Vesrion : 0.1
 
 using namespace std;	// using name space to use "cout" and "cin" 
 
+
+void problem3()
+{
+	int num;
+
+	cout << "Enter the number : ";
+	cin >> num;
+	int count = 0; 
+
+	if (num < 4)
+	{
+		cout << "not possbile : ";
+		return;
+	}
+
+	int a[4] = { 1 , 1 , 1 , num - 3 };
+	int t[4] = { 1 , 1, 1, num - 3 };
+
+	int temp = a[3] , sum = 0 , index = 2 ;
+	while (a[0] <= a[3])
+	{
+		t[3] = a[3];
+			while (t[index] <= t[3])
+			{
+				sum =  t[0] + t[1] + t[2] + t[3];
+				//if (sum  == num)
+				{
+					cout << t[0] << '+' << t[1] << '+' << t[2] << '+' << t[3] << '=' << sum << endl;
+				}
+				t[index]++;
+				t[3]--;
+				count++;
+
+			}
+
+			if (index == 0)
+			{
+				a[0] = t[0];
+			}
+
+			if (a[1] <= a[3])
+			{
+				index = 1;
+				if ( !(a[2] + 1 > a[3]) )
+				{
+					t[2] = ++a[2];
+					a[3]--;
+				}
+				if (!(a[1] + 1 > a[3]))
+				{
+					a[3]--;
+					t[1] = ++a[1];
+				}
+				
+			}
+			else
+			{
+				index = 0;
+				t[0] = ++a[0];
+				a[3]-- ;
+			}
+
+	}
+
+	cout << "the possibilities are : "<<count;
+
+}
+
+
+/*
 void problem3()
 {
 	int num;  
@@ -50,6 +120,5 @@ void problem3()
 		}
 
 	}
-
-
 }
+*/
