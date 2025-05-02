@@ -132,7 +132,6 @@
     <ClCompile Include="ifElseFun.cpp" />
     <ClCompile Include="ifFun.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="string2Fun.cpp" />
     <ClCompile Include="stringFun.cpp" />
     <ClCompile Include="enumFun.cpp" />
   </ItemGroup>

@@ -14,7 +14,7 @@ using namespace std;	// using name space to use "cout" and "cin"
 
 int main()
 {
-	long int number = 0;
+	long long int number = 0;
 
 	cout << "Enter the number : ";
 	cin >> number; 
@@ -25,7 +25,7 @@ int main()
 		return 0; 
 	}
 	// to not loose the actual number while we slicing it , so one temp variable to use for that 
-	long int tempNumber = number;	
+	long long int tempNumber = number;	
 	int noOfDigits = 0; 
 
 	// to count the number of digits in that number , size of the number 
@@ -36,7 +36,7 @@ int main()
 	}
 
 	tempNumber = number ;	
-	long int sum = 0;		// to hold the sum of all digits products 
+	long long int sum = 0;		// to hold the sum of all digits products 
 	int res;				//  to hold the each digit while slicing the number 
 	int resProduct = 0;		// to hold the product of each digit 
 

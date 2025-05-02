@@ -1,0 +1,11 @@
+#pragma once
+void array2Dfun1();
+void array2DmatrixMul();
+void array2Dfun3();
+void charArray1();
+void charArray2();
+void charArray3();
+void charArray4();
+void arrayFun1();
+void charArray5();
+void charArray6();

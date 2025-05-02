@@ -15,25 +15,28 @@ using namespace std;	// using name space to use "cout" and "cin"
 
 int main()
 {
-	long int number = 0;
+	long long int number = 0;
 	cout << "Enter the number : ";
 	cin >> number; 
 
 
-	int res = 0;	// to get the each digit and to compare with iter . 
-	int	count0 = 0 ;
-	int count1 = 0; 
-	int	count2 = 0;
-	int count3 = 0;
-	int	count4 = 0;
-	int count5 = 0;
-	int	count6 = 0;
-	int count7 = 0;
-	int	count8 = 0;
-	int count9 = 0;
+	short int res = 0;	// to get the each digit and to compare with iter . 
+	short int count0 = 0 ;
+	short int count1 = 0; 
+	short int count2 = 0;
+	short int count3 = 0;
+	short int count4 = 0;
+	short int count5 = 0;
+	short int count6 = 0;
+	short int count7 = 0;
+	short int count8 = 0;
+	short int count9 = 0;
 
 
 	cout << "Digit frequencies:" << endl;
+
+	if (number < 0)
+		number *= -1;
 
 
 	while (number)

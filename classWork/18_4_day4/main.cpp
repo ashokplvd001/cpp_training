@@ -22,7 +22,6 @@ int main(int argc , char ** argv , char **env)
 	
 //	charArray();
 	//stringFun();
-	//string2Fun();
 	//enumFun();
 	//ifFun();
 	ifElseFun();
