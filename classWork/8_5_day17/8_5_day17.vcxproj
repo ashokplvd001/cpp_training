@@ -129,9 +129,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="main2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="program1.cpp" />
+    <ClCompile Include="program10.cpp" />
+    <ClCompile Include="program11.cpp" />
+    <ClCompile Include="program9.cpp" />
     <ClCompile Include="program2.cpp" />
     <ClCompile Include="program3.cpp" />
+    <ClCompile Include="program4.cpp" />
+    <ClCompile Include="program5.cpp" />
+    <ClCompile Include="program6.cpp" />
+    <ClCompile Include="program7.cpp" />
+    <ClCompile Include="program8.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h" />

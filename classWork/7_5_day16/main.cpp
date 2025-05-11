@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	int opt = 8; 
+	int opt = 13; 
 
 	switch (opt)
 	{
@@ -34,8 +34,21 @@ int main()
 	case 8:
 		program8();
 		break;
-	
-
+	case 9:
+		program9();
+		break;
+	case 10:
+		program10();
+		break;
+	case 11 :
+		program11();
+		break;
+	case 12:
+		program12();
+		break;
+	case 13:
+		program13();
+		break;
 	
 	}
 

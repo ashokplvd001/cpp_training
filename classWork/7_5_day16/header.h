@@ -7,3 +7,8 @@ void program5();
 void program6();
 void program7();
 void program8();
+void program9();
+void program10();
+void program11();
+void program12();
+void program13();
