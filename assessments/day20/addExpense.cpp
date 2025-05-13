@@ -1,5 +1,7 @@
 #include "header.h"
 
+bool amountAdd(int day, int opt);
+bool addExpenseValidation(int day);
 
 bool addExpenseValidation( int day )
 {
@@ -69,6 +71,8 @@ bool addExpense()
 			return false;
 
 		}
+
+		dayCount = day; 
 
 		cout << "Enter the option 1.BreakfastAmount 2.LunchAmount 3.DinnerAmount 4.ExtraAmount 5.GoBack : ";
 		cin >> opt;

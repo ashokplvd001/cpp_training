@@ -6,18 +6,27 @@ using namespace std;
 #define DAY_ARRAY_SIZE 4 
 
 
-int** monthArray = nullptr;
-int* sumArray = nullptr;
-int dayCount = 0;
+extern int** monthArray ;
+extern int* sumArray ;
+extern int dayCount ;
 
-const char * food[DAY_ARRAY_SIZE] = { "BreakFast" , "Lunch" , "Dinner" , "Others " };
+extern const char * food[DAY_ARRAY_SIZE] 
+;
 
 
 
 void* createMemSpace(void* ptr, int dataTypeSize, int sizeOfArra);
 
-
-
-
-bool addExpense();bool amountAdd(int day, int opt);
+bool addExpense();
+bool amountAdd(int day, int opt);
 bool addExpenseValidation(int day);
+
+bool viewExpense();
+bool displayDayAll(int day);
+bool displayDay();
+bool displayInRange(int from, int last);
+bool displayMonth();
+bool displayFromTo();
+
+
+
