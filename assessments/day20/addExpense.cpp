@@ -20,7 +20,8 @@ bool addExpenseValidation( int day )
 				monthArray[tempDay - 1] = nullptr;
 
 #ifdef DEBUG 
-				cout << "monthArray - day = " << tempDay << " - address = " << monthArray << endl;
+				
+				cout << "monthArray - day = " << tempDay << " - address = " << monthArray[tempDay-1] << endl;
 				cout << "sumarray - address = " << monthArray << endl;
 #endif
 

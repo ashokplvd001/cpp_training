@@ -13,7 +13,7 @@ bool viewExpense()
 
 	do
 	{
-		cout << "Enter the option 1.In a day 2.FromTo 3.Month 4.exit";
+		cout << "Enter the option 1.In a day 2.FromTo 3.Month 4.exit : ";
 		fflush(stdin);
 		cin >> opt;
 
@@ -81,10 +81,10 @@ bool displayMonth( )
 bool displayInRange(int from, int last)
 {
 	int totalSum = 0;
-	for (int i = from - 1; i < last ; i++)
+	for (int i = from ; i <= last ; i++)
 	{
 		displayDayAll(i );
-		totalSum += sumArray[i];
+		totalSum += sumArray[i-1];
 	}
 
 	cout << "=======================================\n";
@@ -118,6 +118,7 @@ bool displayDayAll(int day)
 	{
 		for (int i = 0; i < DAY_ARRAY_SIZE; i++)
 			cout << food[i] << " - " << dayArray[i] << endl;
+
 		cout << "total of this day is - " << sumArray[day - 1] << endl;
 	}
 	else

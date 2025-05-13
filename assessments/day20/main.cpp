@@ -17,7 +17,7 @@ int main()
 
 	do
 	{
-		cout << "Enter the option\n1.Add/Modify expense\n2.View expense\n3.exit";
+		cout << "Enter the option\n1.Add/Modify expense\n2.View expense\n3.exit\n";
 		fflush(stdin);
 		cin >> opt; 
 		switch (opt)
