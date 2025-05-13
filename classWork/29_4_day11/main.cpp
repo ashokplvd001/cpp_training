@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 
-	int opt = 8 ; 
+	int opt = 1 ; 
 
 	switch (opt)
 	{

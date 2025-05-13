@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e5abd7d4-6c53-48a3-9af7-8f9722ce7fd4}</ProjectGuid>
-    <RootNamespace>My55day14</RootNamespace>
+    <ProjectGuid>{db0974b9-e7ec-4762-b14d-536aa685170c}</ProjectGuid>
+    <RootNamespace>My304day12</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -128,13 +128,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="array2Dfun1.cpp" />
+    <ClCompile Include="array2Dfun3.cpp" />
+    <ClCompile Include="array2DmatrixMul.cpp" />
+    <ClCompile Include="arrayFun1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="charArray1.cpp" />
+    <ClCompile Include="charArray2.cpp" />
+    <ClCompile Include="charArray3.cpp" />
+    <ClCompile Include="charArray4.cpp" />
+    <ClCompile Include="charArray5.cpp" />
+    <ClCompile Include="charArray6.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="program3.cpp" />
-    <ClCompile Include="program1.cpp" />
-    <ClCompile Include="program2.cpp" />
-    <ClCompile Include="program4.cpp" />
-    <ClCompile Include="program5.cpp" />
-    <ClCompile Include="program6.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h" />

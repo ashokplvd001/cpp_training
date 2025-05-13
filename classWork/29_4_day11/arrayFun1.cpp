@@ -8,21 +8,23 @@ void arrayFun1()
 	int a;
 	long long int b; 
 	char c;
+	short s;
 	double d; 
 	float f; 
-	short s; 
+	
 
-	cout << "Address of int a  = " << &a << endl;
+	cout << "Address of int a  = " << (unsigned long long int) &a << endl;
 
-	cout << "Address of long long int a  = " << &b << endl;
+	cout << "Address of long long int a  = " << (unsigned long long int) &b << endl;
 
-	//cout << "Address of char c  = " << &c << endl;
+	cout << "Address of double d  = " << (unsigned long long int) &d << endl;
 
-	cout << "Address of double d  = " << &d << endl;
+	cout << "Address of float f  = " << (unsigned long long int) &f << endl;
 
-	cout << "Address of float f  = " << &f << endl;
+	cout << "Address of short s   = " << (unsigned long long int) &s << endl;
 
-	cout << "Address of short s   = " << &s << endl;
+	cout << "Address of char c  = " << ( unsigned long long int ) & c << endl;
+
 
 
 
@@ -38,6 +40,7 @@ void arrayFun1()
 
 	cout << "Address of arr[2] = " << &arr[2] << endl;
 	cout << "Address of arr[2] = " << (unsigned int)&arr[2] << endl;
+
 }
 
 

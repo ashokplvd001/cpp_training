@@ -4,7 +4,7 @@ using namespace std;
 
 void program2()
 {
-	int a = 0, b = 0, c = 0, d = 0, e = 0, f = 0; 
+	int a = 0, b = 0, c = 0, d = 0, e = 0 ; 
 
 	cout << "Enter the 5 numbers\n";
 	cin >> a >> b >> c >> d >> e;
@@ -37,14 +37,26 @@ void program2()
 			{
 				if (a > e)
 					cout << a << " is biggest number\n";
-				
+				else
+					cout<< e << " is biggest number\n";
 			}
+			else if (d > e)
+				cout << d << " is biggest number\n";
+			else
+				cout << e << " is biggest number\n";
+			
 		}
 		else if (c > d)
 		{
 			if (c > e)
-				cout << c << " is biggest number\n";
+				cout << a << " is biggest number\n";
+			else
+				cout << e << " is biggest number\n";
 		}
+		else if (d > e)
+			cout << d << " is biggest number\n";
+		else
+			cout << e << " is biggest number\n";
 
 	}
 	else if ( b > c )
@@ -53,17 +65,24 @@ void program2()
 		{
 			if (b > e)
 				cout << b << " is biggest number\n";
+			else
+				cout << e << " is biggest number\n";
 		}
+		else if (b > e)
+			cout << d << " is biggest number\n";
+		else
+			cout << e << " is biggest number\n";
 	}
 	else if (  c > d )
-	{		if (c > e)
-			cout << c << " is biggest number\n";
+	{
+		if (c > e)
+			cout << b << " is biggest number\n";
+		else
+			cout << e << " is biggest number\n";
 
 	}
 	else if (d > e)
-	{
 		cout << d << " is biggest number\n";
-	}
 	else
 		cout << e << " is biggest number\n";
 

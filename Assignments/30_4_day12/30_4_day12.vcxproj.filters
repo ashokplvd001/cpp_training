@@ -18,22 +18,34 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="program1.cpp">
+    <ClCompile Include="array2Dfun1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="program2.cpp">
+    <ClCompile Include="array2DmatrixMul.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="program3.cpp">
+    <ClCompile Include="array2Dfun3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="program4.cpp">
+    <ClCompile Include="charArray1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="program5.cpp">
+    <ClCompile Include="charArray2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="program6.cpp">
+    <ClCompile Include="charArray3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="charArray4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="arrayFun1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="charArray5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="charArray6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

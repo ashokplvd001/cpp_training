@@ -37,8 +37,10 @@ void foramttedIO1()
 	void printFun(int slno, char* name, float m1, float m2, float m3, float m4, );
 	void 	printDesign();
 	printDesign();
-	printf("%010s")
-		printFun(slno, s1, s1m1, s1m2, s1m3, s1m4, av1);
+
+	printf("%010s");
+
+	printFun(slno, s1, s1m1, s1m2, s1m3, s1m4, av1);
 
 }
 
