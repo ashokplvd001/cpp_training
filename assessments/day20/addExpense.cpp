@@ -7,26 +7,41 @@ bool addExpenseValidation( int day )
 {
 	if (day > 0 && day <= MONTH_MAX)
 	{
-		if (day < dayCount)
+		if (day > dayCount)
 		{
-			while (day > dayCount + 1)
-			{
-				monthArray = ( int **)  createMemSpace(monthArray, sizeof(int*), day);
-				
-				sumArray = ( int * )  createMemSpace(sumArray, sizeof(int), day );
-				
-				sumArray[day - 1] = 0;
-				monthArray[day - 1] = nullptr;
-				day--;
-			}
+			int tempDay = day; 
+			monthArray = (int**)createMemSpace(monthArray, sizeof(int*), day);
 
-			if (monthArray[day - 1] == nullptr)
+			sumArray = (int*)createMemSpace(sumArray, sizeof(int), day);
+
+			while (tempDay > dayCount )
 			{
-				monthArray[day - 1] =( int * )  createMemSpace(nullptr, sizeof(int), DAY_ARRAY_SIZE);
+				sumArray[tempDay - 1] = 0;
+				monthArray[tempDay - 1] = nullptr;
+
+#ifdef DEBUG 
+				cout << "monthArray - day = " << tempDay << " - address = " << monthArray << endl;
+				cout << "sumarray - address = " << monthArray << endl;
+#endif
+
+				tempDay--;
+			}
+			
+
+		}
+
+			if (monthArray[day-1] == nullptr)
+			{
+				monthArray[day-1] =( int * )  createMemSpace(nullptr, sizeof(int), DAY_ARRAY_SIZE);
+
+#ifdef DEBUG 
+				cout << "dayarray - address = " << monthArray[day-1] << endl;
+#endif
+
 				for (int i = 0; i < DAY_ARRAY_SIZE; i++)
 					monthArray[day - 1][i] = 0;
 			}
-		}
+		
 
 	}
 	else
@@ -60,9 +75,10 @@ bool addExpense()
 	bool flag = false;
 	int opt = 0 ; 
 
-	do
-	{
+	
 		cout << "Enter the day : ";
+
+		fflush(stdin);
 		cin >> day;
 		flag = addExpenseValidation(day);
 
@@ -73,23 +89,27 @@ bool addExpense()
 		}
 
 		dayCount = day; 
-
-		cout << "Enter the option 1.BreakfastAmount 2.LunchAmount 3.DinnerAmount 4.ExtraAmount 5.GoBack : ";
-		cin >> opt;
-
-
-		switch (opt)
+		
+		do
 		{
-		default:
-			cout << "Invalid option for\n";
-		case 1:
-		case 2:
-		case 3:
-		case 4:
-			amountAdd(day, opt);
-		case 5 :
-			break;
-		}
+			cout << "Enter the option 1.BreakfastAmount 2.LunchAmount 3.DinnerAmount 4.ExtraAmount 5.GoBack : ";
+			fflush(stdin);
+			cin >> opt;
+
+
+			switch (opt)
+			{
+				default:
+					cout << "Invalid option for\n";
+					break;
+				case 1:
+				case 2:
+				case 3:
+				case 4:
+					amountAdd(day, opt);
+				case 5 :
+					break;
+			}
 
 		
 	} while (opt != 5);

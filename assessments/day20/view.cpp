@@ -9,16 +9,19 @@ bool viewExpense()
 {
 
 	int opt = 0 ;
-	cout << "Enter the option 1.In a day 2.FromTo 3.Month 4.exit";
+	
 
 	do
 	{
+		cout << "Enter the option 1.In a day 2.FromTo 3.Month 4.exit";
+		fflush(stdin);
 		cin >> opt;
 
 		switch (opt)
 		{
 		default : 
 			cout << "Invalid option\n";
+			break;
 		case 1 :
 			displayDay();
 			break;
@@ -44,8 +47,10 @@ bool displayFromTo( )
 {
 	int start = 0 , last = 0;
 	cout << "Enter the start day : ";
+	fflush(stdin);
 	cin >> start; 
 	cout<< "Enter the start day : ";
+	fflush(stdin);
 	cin >> last ;
 
 	if ( !(start >= last && start > 0 && last <= dayCount))

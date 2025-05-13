@@ -3,7 +3,8 @@
 using namespace std;
 
 #define MONTH_MAX 31 
-#define DAY_ARRAY_SIZE 4 
+#define DAY_ARRAY_SIZE 4
+#define DEBUG 1
 
 
 extern int** monthArray ;

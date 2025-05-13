@@ -13,10 +13,12 @@ int main()
 
 	int opt = 0;
 	
-	cout << "Enter the option\n 1.Add/Modify expense\n2.View expense\n 3.exit";
+	
 
 	do
 	{
+		cout << "Enter the option\n1.Add/Modify expense\n2.View expense\n3.exit";
+		fflush(stdin);
 		cin >> opt; 
 		switch (opt)
 		{
