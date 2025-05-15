@@ -133,7 +133,7 @@
     <ClCompile Include="addExpense.cpp" />
     <ClCompile Include="createMemSpace.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="view.cpp" />
+    <ClCompile Include="viewExpense.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

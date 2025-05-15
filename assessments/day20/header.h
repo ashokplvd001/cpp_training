@@ -4,15 +4,14 @@ using namespace std;
 
 #define MONTH_MAX 31 
 #define DAY_ARRAY_SIZE 4
-#define DEBUG 0
+//#define DEBUG 
 
 
 extern int** monthArray ;
 extern int* sumArray ;
 extern int dayCount ;
 
-extern const char * food[DAY_ARRAY_SIZE] 
-;
+extern const char * food[DAY_ARRAY_SIZE] ;
 
 
 

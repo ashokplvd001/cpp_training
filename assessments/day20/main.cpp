@@ -22,22 +22,18 @@ int main()
 		cin >> opt; 
 		switch (opt)
 		{
-		default:
-			cout << "Invalid option\n";
-			break;
-		case 1:
-			addExpense();
-			break;
-		case 2:
-			viewExpense();
-			break;
-		case 3 :
-			break;
-
+			default:
+				cout << "Invalid option\n";
+				break;
+			case 1:
+				addExpense();
+				break;
+			case 2:
+				viewExpense();
+				break;
+			case 3 :
+				break;
 		}
-
-
-
 	} while (opt != 3);
 
 	cout << "********************Program Ended************************\n";

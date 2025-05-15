@@ -58,6 +58,7 @@ bool amountAdd( int day , int opt )
 {
 	int amount = 0; 
 	cout << "Enter the amount : ";
+	fflush(stdin);
 	cin >> amount; 
 
 	monthArray[day - 1][opt - 1] = amount; 
@@ -90,10 +91,11 @@ bool addExpense()
 		}
 
 		dayCount = day; 
-		
+		cout << "Enter the option 1.BreakfastAmount 2.LunchAmount 3.DinnerAmount 4.ExtraAmount 5.GoBack : ";
+
 		do
 		{
-			cout << "Enter the option 1.BreakfastAmount 2.LunchAmount 3.DinnerAmount 4.ExtraAmount 5.GoBack : ";
+			
 			fflush(stdin);
 			cin >> opt;
 
