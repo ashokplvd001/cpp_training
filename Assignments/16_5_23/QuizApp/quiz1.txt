@@ -1,0 +1,24 @@
+Q)What is capital of india ?
+A)Delhi
+B)Mumbai
+c)Hyderabad
+D)Chennai
+R)A
+Q)What is capital of tamilnadu ?
+A)Hyderabad
+B)Pandicherry
+C)kanyakumari
+D)Chennai
+R)D
+Q)what is capital for kerala ?
+A)Trivendam
+B)Kochi
+C)Kannur
+D)Kottayam
+R)A
+Q)what comes after M ?
+A)K
+B)L 
+C)N
+D)O
+R)C

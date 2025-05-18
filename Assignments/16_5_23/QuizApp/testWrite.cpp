@@ -137,12 +137,18 @@ bool inputValidation(char& input , int &  index , int questionsCount , char  & r
 		{
 		default :
 			printFlag = false;
+			break;
 		case 'A' :
 		case 'B' :
 		case 'C' :
 		case 'D' :
-			if (input == rightOpt)
-				rightFlag = 1 ;
+			if (input == toupper(rightOpt))
+			{
+#ifdef DEBUFG
+				cout << "right and\n" << endl;
+#endif
+				rightFlag = 1;
+			}
 			else rightFlag = 0 ;
 			break;
 		case 'Q':

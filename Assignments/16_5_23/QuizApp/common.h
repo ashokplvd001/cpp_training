@@ -8,7 +8,7 @@ using namespace std ;
 
 #define NO_OF_CHOICE 4
 
-#define DEBUG 
+//#define DEBUG 
 
 
 typedef struct _student
