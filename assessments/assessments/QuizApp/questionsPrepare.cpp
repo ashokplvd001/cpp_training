@@ -15,24 +15,8 @@ bool qustionsPrep(QUIZ* quiz1, string fileName)
 	cout << "filename : " << fileName << endl;
 #endif
 
-	//fileName =
-	//	"C:\\Users\\Administrator\\Desktop\\cpp_training_git_sync\\assessments\\assessments\\QuizApp\\" //x64\\Debug\\"
-	//	+ fileName;
-
-#ifdef DEBUG 
-	cout << "filename : " << fileName << endl;
-#endif
-
 	FILE* fptr = fopen((const char*)fileName.c_str(), "r");
 
-
-#ifdef DEBUG
-
-	perror("fopen");
-
-	cout << "fptr : " << fptr << endl;
-
-#endif
 
 
 	if (fptr == NULL)
@@ -40,113 +24,35 @@ bool qustionsPrep(QUIZ* quiz1, string fileName)
 		perror("fopen");
 		return false;
 	}
-		
-
-
-
-	QUES* tempPtr = nullptr;
 
 	while (prepQuestionAns(fptr, &quest))
 	{
+		quesCount++;	
 
-
-		quesCount++;
-		///tempPtr = (QUES*)createMemory(quiz1->quizQuestions, sizeof( QUES ), quesCount);
-		tempPtr = (QUES*)malloc(sizeof(QUES) * 1);
-#ifdef DEBUG 
-		cout << "Cout1\n";
-		cout << "quesCount = " << quesCount << endl;
-		cout << "tempPtr = " << tempPtr << endl;
-		cout << "quiz1->quizQuestions = " << quiz1->quizQuestions << endl;
-#endif
-
-		if (tempPtr == nullptr)
-			return false;
-
-		quiz1->quizQuestions = tempPtr;
-#ifdef DEBUG
-		cout << "cout11\n";
-		*tempPtr = QUES{};
-		cout << "count12\n";
-#endif 
-
-
-		quiz1->quizQuestions[quesCount - 1] = QUES{};
-
-#ifdef DEBUG 
-		cout << "quesCount = " << quesCount << endl;
-		cout << "Cout2\n";
-		cout << "quesPtr.quesQuestion =  " << quiz1->quizQuestions[quesCount - 1].quesQuestion << endl;
-#endif
-
-		if (copyInfo(&quiz1->quizQuestions[quesCount - 1], quest) == false)
-			return false;
-
-#ifdef DEBUG 
-		cout << "Cout3\n";
-#endif
-		quest = QUES{};
+		quiz1->quizQuestions.push_back( quest );			
 	}
 
-	quiz1->quizQuestionCount = quesCount;
+#ifdef DEBUG 
+	cout << "quesCount = " << quesCount << endl;
+#endif
 
-	quiz1->quizRandQuestionsList = nullptr;
-
-	quiz1->quizRandQuestionsList = (short int*)createMemory(quiz1->quizRandQuestionsList, sizeof(short int), quesCount);
-
-	if (quiz1->quizRandQuestionsList == nullptr)
-		return false;
-
-
-	for (int i = 0; i < quesCount; i++)
-		quiz1->quizRandQuestionsList[i] = 0;
 
 	fclose(fptr);
 
-	return true;
-}
+	quiz1->quizQuestionCount = quesCount;
 
+	quiz1->quizRandQuestionsList.resize(quesCount, 0);
 
-
-void* createMemory(void* ptr, unsigned int sizeOfDt, unsigned int noOfElements)
-{
-	void* tptr = (void*)realloc(ptr, sizeOfDt * noOfElements);
-	return tptr;
-}
-
-
-bool copyInfo(QUES* quesPtr, QUES temp)
-{
-
-	quesPtr->quesQuestion = temp.quesQuestion;
-
-
-#ifdef DEBUG 
-	cout << "Cout4\n";
-	cout << "quesPtr->quesQuestion =  " << quesPtr->quesQuestion << endl;
-#endif
-
-	for (int i = 0; i < NO_OF_CHOICE; i++)
+	if (quesCount < 1)
 	{
-#ifdef DEBUG 
-		cout << "quesPtr->quesOpt = " << quesPtr->quesOpt[i] << endl;
-#endif
-
-#ifdef DEBUG 
-		cout << "Cout5\n";
-#endif
-
-
-		quesPtr->quesOpt[i] = temp.quesOpt[i];
+		cout<<"No questions in quiz source\n" ;
+		return false;
 	}
 
-
-	quesPtr->quesRightOpt = temp.quesRightOpt;
-#ifdef DEBUG 
-	cout << "Cout5\n";
-#endif
 	return true;
 }
+
+
 
 
 
@@ -215,6 +121,7 @@ bool prepQuestionAns(FILE* fptr, QUES* quest)
 		}
 		if (feof(fptr))
 			return true;
+
 	} while (ch1 == 'Q');
 
 	fseek(fptr, -1, SEEK_CUR);

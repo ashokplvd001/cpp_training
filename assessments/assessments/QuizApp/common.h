@@ -2,6 +2,8 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+
 using namespace std ; 
 
 #define NO_OF_CHOICE 4
@@ -28,9 +30,9 @@ typedef struct _question
 
 typedef struct _quiz
 {
-	QUES* quizQuestions; 
+	vector < QUES > quizQuestions; 
 	short int quizQuestionCount;
-	short int* quizRandQuestionsList;
+	vector < short int > quizRandQuestionsList;
 }QUIZ;
 
 

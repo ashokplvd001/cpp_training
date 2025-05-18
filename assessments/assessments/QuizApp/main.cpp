@@ -8,7 +8,7 @@ int main()
 {
 	
 	string fileName = "" ;
-	QUIZ quiz1 = { nullptr , 0 , nullptr } ;
+	QUIZ quiz1 = { {} , 0 , {} };
 
 	
 	cout << "Enter the quiz name : ";
