@@ -17,6 +17,7 @@ typedef struct _student
 	string stdtName ;
 	int stdtCorrectAns;
 	int stdtMarks; 
+	float stdPercentage;
 }STDT;
 
 
@@ -33,6 +34,8 @@ typedef struct _quiz
 	vector < QUES > quizQuestions; 
 	short int quizQuestionCount;
 	vector < short int > quizRandQuestionsList;
+	//vector <bool> quizRighWrong; // bool vector behavior is different
+	vector <char> quizRighWrong;
 }QUIZ;
 
 

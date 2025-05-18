@@ -1,20 +1,24 @@
-Q)what comes after B ?
-A)a
-B)c
-c)D
-D)B
+Q)Which country girls are most beautiful ?
+A)USA
+B)India
+c)Arab
+D)Europe
 R)B
-Q)what comes after F ?
-A)G
-B)J
-C)L
-D)Y
-R)A
-Q)what comes after M ?
-A)Q
-B)T
-C)H
-D)N
+Q)which part of india have most beautiful girls ?
+A)North-East
+B)Middle
+C)North India
+D)South India
 R)D
-
-
+Q)which state girls are most beautiful India ?
+A)Kerala
+B)Kashmir
+C)Andhra-Karnataka
+D)Tamil Nadu
+R)A
+Q)which district girls are most beautiful in kerala ?
+A)Alappuzha and Iddiki
+B)Kannur 
+C)Kotttayam
+D)Trissur
+R)C

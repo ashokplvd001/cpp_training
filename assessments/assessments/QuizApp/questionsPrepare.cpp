@@ -43,6 +43,8 @@ bool qustionsPrep(QUIZ* quiz1, string fileName)
 
 	quiz1->quizRandQuestionsList.resize(quesCount, 0);
 
+	quiz1->quizRighWrong.resize(quesCount, 0 );
+
 	if (quesCount < 1)
 	{
 		cout<<"No questions in quiz source\n" ;
@@ -88,41 +90,41 @@ bool prepQuestionAns(FILE* fptr, QUES* quest)
 
 	} while (flag == false);
 
-
+	
 	do
 	{
-		ch1 = tolower(fgetc(fptr));
+		ch1 = toupper(fgetc(fptr));
 		switch (ch1)
 		{
-		case 'a':
-		case 'b':
-		case 'c':
-		case 'd':
-		{
-			if (fgetc(fptr) == ')')
+			case 'A':
+			case 'B':
+			case 'C':
+			case 'D':
 			{
-				while ((ch2 = fgetc(fptr)) != '\n' && ch2 != EOF)
+				if ( fgetc(fptr) == ')')
 				{
-					quest->quesOpt[ch1 - 'a'] = quest->quesOpt[ch1 - 'a'] + ch2;
+					while ((ch2 = fgetc(fptr)) != '\n' && ch2 != EOF)
+					{
+						quest->quesOpt[ch1 - 'A'] = quest->quesOpt[ch1 - 'A'] + ch2;
+					}
 				}
 			}
-		}
-		break;
-		case 'r':
-		{
-			if ((ch2 = fgetc(fptr)) == ')')
+			break;
+			case 'R':
 			{
-				ch2 = toupper(fgetc(fptr));
-				quest->quesRightOpt = ch2;
+				if ((ch2 = fgetc(fptr)) == ')')
+				{
+					ch2 = toupper(fgetc(fptr));
+					quest->quesRightOpt = ch2;
+				}
+
 			}
-
-		}
-
+			break;
 		}
 		if (feof(fptr))
 			return true;
 
-	} while (ch1 == 'Q');
+	} while (ch1 != 'Q');
 
 	fseek(fptr, -1, SEEK_CUR);
 
