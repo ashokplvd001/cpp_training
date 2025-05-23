@@ -1,7 +1,3 @@
-
-#include <iostream>
-#include <string>
-
 #ifndef __STUDENT5__
 #define __STUDENT5__
 
