@@ -4,6 +4,8 @@
 
 using namespace std;
 
+
+
 void Student5::setDetails(string id, string name, string dept, string phone)
 {
 	this->s_ID = id;
@@ -61,4 +63,3 @@ float Student5::calcAvg() const
 
 	return res;
 }
-

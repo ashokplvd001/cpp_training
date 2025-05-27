@@ -4,6 +4,7 @@
 
 using namespace std;
 
+
 void program5()
 {
 	Student5 s1;

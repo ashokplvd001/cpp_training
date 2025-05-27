@@ -4,6 +4,9 @@
 #include <iostream>
 #include <string>
 
+using namespace std ;
+
+
 class Student5
 {
 	string s_ID;
@@ -25,6 +28,8 @@ public:
 
 	void printSemWiseMarks() const;
 };
+
+
 
 
 

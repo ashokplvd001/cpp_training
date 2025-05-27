@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstring>
+#include <string>
 using namespace std;
 
 class Student2
@@ -29,11 +29,17 @@ public:
 
 void program2()
 {
-	Student2 s;
+
 	string n = "ok";
-
-//	s.display();
-	s.setName(n);
+	/*
+	cout << "okokokok\n";
+	cout << n << endl;
+	cout << "okokokok\n";
+	*/
+	
+	Student2 s;
 	s.display();
-
+	s.setName( n);
+	s.display();
+	
 }

@@ -1,12 +1,12 @@
 #include <iostream>
 
-using namespace std; 
+using namespace std;
 
 class Employee1
 {
-	int e_id; 
-	string e_name; 
-public :
+	int e_id;
+	string e_name;
+public:
 	Employee1(int id, string name);
 	Employee1();
 	void display() const;
@@ -16,19 +16,19 @@ public :
 
 bool Employee1::getId(int id)
 {
-	e_id = id; 
-	return true; 
+	e_id = id;
+	return true;
 }
 
 bool Employee1::getName(string name)
 {
 	e_name = name;
-	return true; 
+	return true;
 }
 
 Employee1::Employee1()
 {
-	e_id = 0 ;
+	e_id = 0;
 	e_name = "none";
 }
 
@@ -50,7 +50,7 @@ class myStack2
 	int s_top;
 	int s_bottom;
 	int s_capacity;
-	Employee1 * s_arr;
+	Employee1* s_arr;
 public:
 	myStack2(int size);
 	int push(Employee1 val);
@@ -59,9 +59,9 @@ public:
 };
 
 
-myStack2::myStack2( int size )
+myStack2::myStack2(int size)
 {
-	s_arr = new Employee1[size] ;
+	s_arr = new Employee1[size];
 	s_capacity = size;
 	s_top = -1;
 	s_bottom = -1;
@@ -107,30 +107,30 @@ void myStack2::display()
 
 }
 
-void program3()
+int main()
 {
 	myStack2 st(6);
 
 	string s = "wfer";
-	char ch = 48; 
-	Employee1 e1(101, s );
+	char ch = 48;
+	Employee1 e1(101, s);
 
 	st.push(e1);
 	st.pop();
 
-	
+
 	for (int i = 0; i <= 7; i++)
 	{
 		cout << "i = " << i << endl;
 		e1.getId(i + 10);
 		ch++;
-		s = s + ch ;
+		s = s + ch;
 		e1.getName(s);
 		st.push(e1);
 		st.display();
-	//	st( )
+		//	st( )
 	}
-	
+
 	for (int i = 0; i <= 7; i++)
 	{
 		cout << "i = " << i << endl;
@@ -140,6 +140,4 @@ void program3()
 	}
 
 
-	
-	return ;
 }

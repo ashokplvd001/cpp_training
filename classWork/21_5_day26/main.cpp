@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-	int opt = 5; 
+	int opt = 2; 
 
 	switch (opt)
 	{
@@ -12,7 +12,7 @@ int main()
 		program1();
 		break;
 	case 2:
-	//	program2();
+		program2();
 		break;
 	case 3:
 		program3();

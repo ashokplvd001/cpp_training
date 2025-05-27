@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{110cf33e-c46f-419c-a2c0-ff64ec7d7286}</ProjectGuid>
-    <RootNamespace>My245day29</RootNamespace>
+    <ProjectGuid>{0256a274-d7b1-41f4-ae7a-88ac3d43ec20}</ProjectGuid>
+    <RootNamespace>My195day24</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,19 +129,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="program5.cpp" />
-    <ClCompile Include="program1.cpp" />
-    <ClCompile Include="program2.cpp" />
-    <ClCompile Include="program3.cpp" />
-    <ClCompile Include="program4.cpp" />
-    <ClCompile Include="program6.cpp" />
-    <ClCompile Include="program7.cpp" />
-    <ClCompile Include="program8.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

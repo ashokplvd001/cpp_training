@@ -2,7 +2,6 @@
 
 using namespace std;
 
-#define MAX 3
 
 
 class myQueue
@@ -31,11 +30,11 @@ myQueue::myQueue(int size)
 
 bool myQueue::enqueue(int val)
 {
-	if (rear == MAX)
+	if (rear == capacity )
 	{
-		//if (front != 0)
+	//	if (front != 0)
 		{
-
+	//		for( int i = front ; i <  )
 		}
 		//	else
 		{
@@ -75,28 +74,27 @@ void myQueue::display()
 
 
 
-void program1()
+void program2()
 {
 	myQueue q1(6);
 
-	q1.arr = new int[MAX];
+	cout << "queue class\n";
+	q1.display();
+	q1.enqueue(10);
+	q1.enqueue(20);
+	q1.enqueue(30);
+	q1.enqueue(40);
+	q1.display();
+	q1.dequeue();
 
-	display();
-	enqueue(10);
-	enqueue(20);
-	enqueue(30);
-	enqueue(40);
-	display();
-	dequeue();
+	q1.display();
+	q1.dequeue();
+	q1.display();
 
-	display();
-	dequeue();
-	display();
-
-	dequeue();
-	display();
-	dequeue();
-	display();
+	q1.dequeue();
+	q1.display();
+	q1.dequeue();
+	q1.display();
 
 
 

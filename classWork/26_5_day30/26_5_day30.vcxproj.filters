@@ -13,39 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{1d97e550-240b-46a7-90e0-b6b87933d123}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{e951ed60-872c-4a0c-8ebe-3ea5c7acd4c7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="linkedkist.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="program1.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="main_linkedlist.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="program2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="program3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="program4.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="program5.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="program6.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="program7.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="program8.cpp">
+    <ClCompile Include="linkedlist2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="header.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="MyLinkedList.h">
+      <Filter>inc</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

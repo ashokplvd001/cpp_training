@@ -6,6 +6,7 @@ class Employee1
 {
 	int e_id;
 	string e_name;
+
 public: 
 	void init(int id, string n)
 	{

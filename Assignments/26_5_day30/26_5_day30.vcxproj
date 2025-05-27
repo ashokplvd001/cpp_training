@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{110cf33e-c46f-419c-a2c0-ff64ec7d7286}</ProjectGuid>
-    <RootNamespace>My245day29</RootNamespace>
+    <ProjectGuid>{259d7665-0cbc-4abb-b0e2-0aa23464508d}</ProjectGuid>
+    <RootNamespace>My265day30</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,20 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EmployeeRecord.cpp" />
+    <ClCompile Include="EmployeeRecord.h" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="program5.cpp" />
-    <ClCompile Include="program1.cpp" />
-    <ClCompile Include="program2.cpp" />
-    <ClCompile Include="program3.cpp" />
-    <ClCompile Include="program4.cpp" />
-    <ClCompile Include="program6.cpp" />
-    <ClCompile Include="program7.cpp" />
-    <ClCompile Include="program8.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
