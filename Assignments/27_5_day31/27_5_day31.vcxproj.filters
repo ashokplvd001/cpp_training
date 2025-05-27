@@ -15,34 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="this1.cpp">
+    <ClCompile Include="program1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="thi2.cpp">
+    <ClCompile Include="program2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="this3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ptrTomember.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="simpleInhert1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="simpleInhert2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="simpleInhert3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="simpleInhert4.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="singleInhert5.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mulipleinhert.cpp">
+    <ClCompile Include="program3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
