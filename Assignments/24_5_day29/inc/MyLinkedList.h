@@ -9,8 +9,7 @@ class MyLinkedList
 	inline void displayData(Node*) const;
 public:
 	//inline MyLinkedList();
-	MyLinkedList() :
-		head(nullptr) {}
+	inline MyLinkedList() { head = nullptr; };
 
 	bool addAtBegin(int data);
 	bool addAtEnd(int data);

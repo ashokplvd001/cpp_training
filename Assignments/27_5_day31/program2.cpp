@@ -1,12 +1,32 @@
 ﻿#include <iostream>
 using namespace std;
 
-class Manager
+class Employee
+{
+protected :
+	int e_id;
+	string e_name;
+public:
+	Employee(int id, string name)
+	{
+		this->e_id = e_id; 
+		this->e_name = name;
+	}
+	void displayEmp()
+	{
+		cout << "employee id : " << e_id << endl;
+		cout << "Employee name : " << e_name << endl;
+	}
+
+};
+
+
+class Manager : public Employee 
 {
 protected:
 	int pay;
 public:
-	Manager()
+	Manager(int id = 0 , string name = "" ) : Employee(id, name)
 	{
 		pay = 500;
 	}
@@ -16,12 +36,12 @@ public:
 	}
 };
 
-class Developer
+class Developer : public Employee
 {
 protected:
 	int pay;
 public:
-	Developer()
+	Developer(int id = 0, string name = "") : Employee(id, name)
 	{
 		pay = 5000;
 	}
@@ -33,26 +53,19 @@ public:
 
 class TechLead : public Manager, public Developer
 {
-	int e_id;
-	string name;
 	int hours;
 	int teamSize;
 public:
-	TechLead(int id, string name, int hours, int teamSize)
+	TechLead(int id, string name, int hours, int teamSize) :
+		Manager( id , name )
 	{
-		this->e_id = id;
-		this->name = name;
 		this->hours = hours;
 		this->teamSize = teamSize;
 	}
-	void displayDetails()
-	{
-		cout << "Tech Lead Info :\n";
-		cout << "EmpId: " << e_id << endl;
-		cout << "Name : " << name << endl;
-	}
+
 	void displaySalary()
 	{
+
 		cout << "Salary based on coding : " << Manager::calSalary(hours)<<endl;
 		cout << "Salary based on coding + team: "
 			<< Manager::calSalary(hours) + teamSize * Developer::calSalary();
@@ -70,6 +83,7 @@ int main()
 	cout << "Team Size: ";cin >> teamSize;
 	TechLead t(empId, name, hours, teamSize);
 
-	t.displayDetails();
+	t.Manager::displayEmp();
+//	t.displayEmp();
 	t.displaySalary();
 }

@@ -1,10 +1,11 @@
 #include <iostream>
 #include "Node.h"
 #include "MyLinkedList.h"
-
+using namespace std;
+/*
 inline MyLinkedList::MyLinkedList() :
 	head(nullptr) {}
-*/
+	*/
 
 inline Node * MyLinkedList::createNode(int data = 0, Node * ptr = nullptr) {
 	return new Node{ data, ptr };

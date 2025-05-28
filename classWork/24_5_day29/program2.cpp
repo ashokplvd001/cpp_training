@@ -30,25 +30,36 @@ myQueue::myQueue(int size)
 
 bool myQueue::enqueue(int val)
 {
+	cout << "eFront :" << front << endl;
+	cout << "erear : " << rear << endl;
 	if (rear == capacity )
 	{
-	//	if (front != 0)
+		if (front != 0)
 		{
-	//		for( int i = front ; i <  )
+			
+			for (int i = front+1 ; i <= rear; i++)
+			{
+				arr[i-front] = arr[i];
+			}
+			rear = rear - front;
+			front = 0;
 		}
-		//	else
+		else
 		{
 			cout << "stack is full\n";
 			return false;
 		}
 	}
 
+	
 	arr[rear++] = val;
 
 }
 
 bool myQueue::dequeue()
 {
+	cout << "dFront :" << front << endl;
+	cout << "drear : " << rear << endl;
 	if (front == rear)
 	{
 		cout << "stack is empty\n";
@@ -76,23 +87,32 @@ void myQueue::display()
 
 void program2()
 {
-	myQueue q1(6);
+	myQueue q1(3);
 
 	cout << "queue class\n";
 	q1.display();
 	q1.enqueue(10);
 	q1.enqueue(20);
+	q1.display();
+	q1.enqueue(50);
 	q1.enqueue(30);
+	q1.display();
+	q1.dequeue();
+	q1.display();
+
 	q1.enqueue(40);
 	q1.display();
-	q1.dequeue();
-
-	q1.display();
+	
 	q1.dequeue();
 	q1.display();
 
+	q1.display();
 	q1.dequeue();
 	q1.display();
+
+	q1.dequeue();
+	q1.display();
+	q1.enqueue(30);
 	q1.dequeue();
 	q1.display();
 
