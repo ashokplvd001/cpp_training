@@ -23,7 +23,7 @@ public:
 		this_thread::sleep_for(chrono::milliseconds(executionTime));
 		auto end = chrono::high_resolution_clock::now();
 		auto duration = chrono::duration_cast<chrono::milliseconds>(end - start);
-		string msg = "job " + to_string(jobId) +" execution " + to_string(duration.count());
+		string msg = "job " + to_string(jobId) + "  | priority " + to_string( priority) + " | execution " + to_string(duration.count());
 		return msg;
 	}
 	int getJobId()
@@ -43,7 +43,7 @@ public:
 
 enum logLevel
 {
-	DEBUG,
+	DEBUG = 1,
 	INFO,
 	WARNING,
 	ERROR
@@ -59,19 +59,15 @@ class logClass
 		{
 		default:
 			return "UNKNOWN";
-			break;
 		case 1:
 			return "DEBUG";
-			break;
 		case 2:
 			return "INFO";
-			break;
 		case 3:
 			return "WARNING";
-			break;
 		case 4:
 			return "ERROR";
-			break;
+
 		}
 	}
 
@@ -97,7 +93,7 @@ public:
 		if (time_string[time_string.size() - 1] == '\n')
 			time_string[time_string.size() - 1] = '\0';
 
-		logFile << " [ " << levelToString(INFO) << " ]  \" " << time_string << " \" " << "Opened job_log.txt" 
+		logFile << "\n [ " << levelToString(INFO) << " ]  \" " << time_string << " \" " << "Opened job_log.txt" 
 			<< "\n****        ***        ****" << endl;
 		//logfile << " [ " << levelToString(log_value) << " ]  " << "logs saved to job_log.txt" << endl;
 
@@ -126,6 +122,8 @@ public:
 
 		logFile << " [ " << levelToString(INFO) << " ]  \" " << time_string << " \" " << "logs saved to job_log.txt" << endl;
 		//logfile << " [ " << levelToString(log_value) << " ]  " << "logs saved to job_log.txt" << endl;
+		
+		logFile << "---------------------------\n";
 		logFile.close();
 	}
 
@@ -138,7 +136,7 @@ bool readThejobList(vector  <job>& v_jobs);
 bool excuteAll(vector  <job>& v_jobs, logClass& log, bool (*)(job&, job&)) ;
  
 bool  prioritySortDescending(job& a, job& b );
-bool  fsfcSortAscending(job& a, job& b );
+bool  fcfsSortAscending(job& a, job& b );
 
 int main()
 {
@@ -176,7 +174,7 @@ int main()
 	}
 	else
 	{
-		fptr = fsfcSortAscending ;
+		fptr = fcfsSortAscending ;
 		excuteAll(v_jobs, log, fptr);
 	}
 }
@@ -189,7 +187,7 @@ bool  prioritySortDescending (job& a, job& b)
 		return a.getPriority() > b.getPriority();
 	};
 
-bool  fsfcSortAscending (job& a, job& b)
+bool  fcfsSortAscending (job& a, job& b)
 	{
 		return a.getJobId() < b.getJobId();
 	};
@@ -205,6 +203,11 @@ bool excuteAll(vector  <job>& v_jobs, logClass& log, bool (*fptr )( job & a , jo
 	}
 
 	std::sort(v_jobs.begin(), v_jobs.end(), fptr );
+
+	if (fptr == fcfsSortAscending)
+		log.logWrite(INFO, "Sorted based on FCFS");
+	else
+		log.logWrite(INFO, "Sorted based on priority");
 
 	auto allstart = chrono::high_resolution_clock::now();
 
@@ -242,14 +245,14 @@ bool readThejobList(vector  <job>& v_jobs)
 
 	while (!inputFileIn.eof())
 	{
-		cout << "okokoko\n";
+		
 		if (!(inputFileIn >> jobId >> executionTime >> priority))
 			break;
 
 		job j(jobId, executionTime, priority);
 
 		v_jobs.push_back( j );
-		cout <<"sizeof = "<<v_jobs.size() << endl;
+		
 
 	}
 
