@@ -15,34 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="multipleInherite1.cpp">
+    <ClCompile Include="prg01.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="multiLevel1.cpp">
+    <ClCompile Include="prg03.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="multiLevel2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="multiLevel3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="multiLevel4.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="multiLevel5.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="multiLevel6.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="multiLevel7.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="hybridInheritance1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="program1.cpp">
+    <ClCompile Include="prg02.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

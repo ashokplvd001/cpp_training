@@ -15,34 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="multipleInherite1.cpp">
+    <ClCompile Include="shallowCopy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="multiLevel1.cpp">
+    <ClCompile Include="deepCopy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="multiLevel2.cpp">
+    <ClCompile Include="operatorOverloading1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="multiLevel3.cpp">
+    <ClCompile Include="operatorOverloadin2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="multiLevel4.cpp">
+    <ClCompile Include="functionPointer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="multiLevel5.cpp">
+    <ClCompile Include="chrono1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="multiLevel6.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="multiLevel7.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="hybridInheritance1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="program1.cpp">
+    <ClCompile Include="chronoWithLogger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
