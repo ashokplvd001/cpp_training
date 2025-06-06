@@ -1,12 +1,13 @@
 #include <iostream>
 #include <set>
-//#include <typeinfo>
+#include <string>
+
 
 using namespace std; 
 
 int main()
 {
-	set<string> visitors;
+	set<int> visitors;
 
 	string input; 
 	string word; 
@@ -23,23 +24,35 @@ int main()
 		ptr = strtok((char*)input.c_str(), " ");
 
 		if (ptr == nullptr)
-			word = ptr;
+			continue; 
+
+		word = ptr;
 
 		if (word == "VISIT")
 		{
+			ptr = strtok( NULL , " ");
+			if (ptr == nullptr)
+				continue;
+
+				word = ptr;
+
+				visitors.insert(stoi(word));
+
 
 		}
 		else if (word == "UNIQUE")
 		{
-
+			cout << visitors.size();
 		}
 		else if (word == "TOP")
 		{
-
+			for (const auto& temp : visitors)
+				cout << temp << ' ';
+			cout << endl;
 		}
 		else
 		{
-			cout<<"Invalid Argument"
+			cout << "Invalid Argument\n";
 		}
 	}
 	
