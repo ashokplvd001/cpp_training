@@ -1,12 +1,10 @@
 #include <iostream>
 
 #include "header.h"
-#include "StorageUnitClass.h"
 using namespace std; 
 
 StorageUnit::StorageUnit()
 {
-
 	RAM = new char[64 * 1024] { ~0, };
 	if (RAM == nullptr)
 	{

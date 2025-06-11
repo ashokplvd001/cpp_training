@@ -117,32 +117,25 @@ _ArgumentType checkArgumentType(string arg)
 
 	if ( ( status = is_address(arg) ) != a_s_invald )
 	{
-		if (status == a_s_valid)
-		{
-		//	cout << "is_address\n";
+		if (status == a_s_valid )
 			return e_Address;
-		}
-			
+		else
+			return e_Error;
 
 	}
 	else if ( (status = is_register(arg)) != a_s_invald )
 	{
 		if (status == a_s_valid)
-		{
-		//	cout << "isregister\n";
-			return e_Register;
-		}
-			
+			return e_Register ;
+		else
+			return e_Error;
 	}
 	else if ((status = is_data(arg)) != a_s_invald )
 	{
 		if (status == a_s_valid)
-		{
-		//	cout << "isData\n";
 			return e_Data;
-		}
-			
-
+		else
+			return e_Error;
 	}
 
 	return e_Error;

@@ -29,42 +29,7 @@ typedef enum _intruction
 //	i_HLT 
 }_Instruction;
 
-class StorageUnit
-{
-private:
-	short int registers[4];
-	char * RAM;
-public:
-	StorageUnit();
-	bool storeInMemory(int index, short int data);
-	bool storeInRegisters(int index, short int data);
-	char getFromMemory(int index);
-	short int  getFromRegisters(int index);
-};
 
 
 using namespace std;
 
-// if no HLT then it is invalid file returns false
-bool loadInstructions(string fileName, vector <string>& instructionsLoader);	// command line argument 
-
-
-bool extractEachLineOFInstruction(vector <string>& instructionsLoader, string& instructionLine , int programCounter)  ;
-
-_Instruction checkInstructionType(string instructionLine);
-
-_ArgumentType checkArgumentType(string arg );	// check if it is AX ,bx , cx , dx or any invalid 
-
-
-// get arguments
-//
-
-bool instructionExcutione(string arg1, string arg2, _Instruction cmd , StorageUnit & storage);
-/*
-bool add(string instuctionLine );
-bool sub(string instructionLine);
-bool mul(string instructionLine);
-bool div(string instructionLine);
-
-bool mov(string instructionLine);
-*/

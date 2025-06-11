@@ -1,20 +1,20 @@
 #include <iostream>
 #include "header.h"
-#include "argumentClass.h"
+
 using namespace std;
 
 int getValue(string str , _ArgumentType argType, StorageUnit& storage );
 bool storeValue(string str, _ArgumentType argType, int value , StorageUnit& storage);
  
-bool instructionExcutione(argument arg1, argument arg2, _Instruction cmd, StorageUnit& storage)
+bool instructionExcutione(string arg1, string arg2, _Instruction cmd, StorageUnit& storage)
 {
-
-	_ArgumentType arg1Type = arg1.checkArgumentType();
-	_ArgumentType arg2Type = arg1.checkArgumentType();
+	_ArgumentType arg1Type = checkArgumentType(arg1);
+	_ArgumentType arg2Type = checkArgumentType(arg2);
 
 	if (arg1Type == e_Data || arg1Type == e_Error)
 	{
-		cout << "Invalid arguments for the command\n";
+
+		cout << "Invalid argument for the command\n";
 		return false; 
 	}
 	else if (arg2Type == e_Error)
@@ -22,10 +22,25 @@ bool instructionExcutione(argument arg1, argument arg2, _Instruction cmd, Storag
 		cout << "Invalid arguments for the command\n";
 		return false;
 	}
+	
+
+
 
 	int res = 0 ;
-	int val1 = getValue(arg1.getArgument(), arg1Type, storage);
-	int val2 = getValue(arg2.getArgument(), arg2Type, storage);
+	int val1 = getValue(arg1, arg1Type, storage);
+	int val2 = getValue(arg2, arg2Type, storage);
+	
+	/*
+	if( arg1Type == e_Register )
+	{
+		string temp = arg1 ;
+		temp.back() = 0;
+		char* ptr = (char*)temp.c_str();
+		int index = stoi(ptr + 1);
+		storage.storeInMemory(index, val2);
+	}
+	*/
+
 
 	if (cmd == i_ADD)
 		res = val1 + val2;
@@ -53,9 +68,9 @@ bool instructionExcutione(argument arg1, argument arg2, _Instruction cmd, Storag
 	}
 	else if (cmd == i_MOV)
 		res = val2;
+	//cout << "Validation done\n";
 
-
-	storeValue(arg1.getArgument(), arg1Type, res, storage);
+	storeValue(arg1, arg1Type, res , storage);
 	
 }
 
@@ -67,7 +82,7 @@ bool storeValue(string arg, _ArgumentType argType, int result , StorageUnit& sto
 	{
 		arg.back() = 0;
 		char* ptr = (char*)arg.c_str();
-		int index = stoi(arg.c_str());
+		int index = stoi(ptr+1);
 		storage.storeInMemory( index , result);
 	}
 	else if (argType == e_Register)
@@ -97,7 +112,7 @@ int getValue( string arg, _ArgumentType argType,  StorageUnit&  storage)
 	{
 		arg.back() = 0;
 		char* ptr = (char*)arg.c_str();
-		int index = stoi(arg.c_str());
+		int index = stoi(ptr+1);
 		return storage.getFromMemory(index);
 	}
 	else if (argType == e_Register)

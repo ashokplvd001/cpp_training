@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d3f1a4f0-a997-4916-ab18-d79cf1494031}</ProjectGuid>
-    <RootNamespace>week08</RootNamespace>
+    <ProjectGuid>{5f0224f4-dbc0-4e2a-b241-80b8887f6553}</ProjectGuid>
+    <RootNamespace>My76day41</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -104,7 +104,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,16 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="argumentClass.cpp" />
-    <ClCompile Include="comandExcution.cpp" />
-    <ClCompile Include="StorageUnitClass.cpp" />
-    <ClCompile Include="extractInstructions.cpp" />
-    <ClCompile Include="fileFunctions.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="argumentClass.h" />
-    <ClInclude Include="header.h" />
+    <ClCompile Include="program1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
