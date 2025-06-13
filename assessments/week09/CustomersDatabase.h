@@ -11,7 +11,7 @@ public:
 
 	void addData(string MSISDN , string infoType , string callType , int value   )
 	{
-		cout << "customeraddData--------->\n";
+	//	cout << "customeraddData--------->\n";
 		auto it = cutomerDb.find(MSISDN);
 		if (it == cutomerDb.end())
 		{
@@ -20,7 +20,7 @@ public:
 		}
 
 		cutomerDb[MSISDN].addData(infoType, callType, value);
-		cout << "customeraddData--------->>\n";
+		//cout << "customeraddData--------->>\n";
 	}
 
 	unordered_map<string, unsigned int > getData(string MSISDN, string infoType)

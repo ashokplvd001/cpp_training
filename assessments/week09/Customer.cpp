@@ -19,7 +19,7 @@ using namespace std;
 
 	void Customer::addData(string infoType, string callType, int value)
 	{
-		cout << "inside top----\n";
+//		cout << "inside top----\n";
 		cout << callType << endl;
 		if (infoType == "1")
 			addLocalData(callType, value);
@@ -32,14 +32,14 @@ using namespace std;
 
 	void Customer::addLocalData(string callType, int value)
 	{
-		cout << "inside top----\n";
+//		cout << "inside top----\n";
 		cout << callType << endl;
 		/*
 		auto it = Data1.find(callType);
 		if (it == Data1.end())
 			return;
 		*/
-		cout << "Inside " << value << endl;
+	//	cout << "Inside " << value << endl;
 		Data1[callType] += value;
 		cout << "Inside2 " << Data1[callType] << endl;
 	}
@@ -51,7 +51,7 @@ using namespace std;
 		if (it == Data2.end())
 			return;
 			*/
-		cout << "Inside " << value << endl;
+	//	cout << "Inside " << value << endl;
 		Data2[callType] += value;
 		cout << "Inside2 " << Data2[callType] << endl;
 	}
@@ -63,7 +63,7 @@ using namespace std;
 		if (it == internet.end())
 			return;
 			*/
-		cout << "Inside " << value << endl;
+//		cout << "Inside " << value << endl;
 		internet[callType] += value;
 		cout << "Inside2 " << internet[callType] << endl;
 	}

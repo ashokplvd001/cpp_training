@@ -44,7 +44,7 @@ private :
 		int i = 0; 
 			while (getline(file, line))
 			{
-				cout << "i1 = " << i++ << endl;
+		//		cout << "i1 = " << i++ << endl;
 				//cout << "okok\n";
 			/*	transform(line.begin(), line.end(), line.end(),
 					[](char& ch) { if (ch == '|') ch = ' '; return ch;});
@@ -132,7 +132,7 @@ private :
 				auto c = it->second;
 				auto data1 = c.getData("local");
 				cout << "Customer ID : " << msisdn; // << " (" << JIO << ")\n";
-				cout << " * Services within the mobile operator *";
+				cout << " * Services within the mobile operator *\n";
 				cout << "Incoming voice call durations : " << data1["MTC"] << endl;
 				cout << "Outgoing voice call durations : " << data1["MOC"] << endl;
 				cout << "Incoming SMS messages : " << data1["SMS-O"] << endl;
@@ -164,7 +164,7 @@ private :
 		int i = 0;
 		while (getline(file, line))
 		{
-			cout << "i2 = " << i++ << endl;
+	//		cout << "i2 = " << i++ << endl;
 			/*
 			transform(line.begin(), line.end(), line.end(),
 				[](char& ch) { if (ch == '|') ch = ' '; return ch;});
