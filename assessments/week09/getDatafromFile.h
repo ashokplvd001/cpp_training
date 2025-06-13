@@ -128,7 +128,7 @@ private :
 
 				//1037928
 				auto tc =db.getDb();
-				auto it = tc.find("1037928");
+				auto it = tc.find(msisdn);
 				auto c = it->second;
 				auto data1 = c.getData("local");
 				cout << "Customer ID : " << msisdn; // << " (" << JIO << ")\n";
@@ -138,7 +138,7 @@ private :
 				cout << "Incoming SMS messages : " << data1["SMS-O"] << endl;
 				cout << "Outgoing SMS messages : " << data1["SMS-MT"] << endl;
 				auto data2 = c.getData("outside");
-				cout << "* Services outside the mobile operator * ";
+				cout << "* Services outside the mobile operator * \n";
 				cout << "Incoming voice call durations : " << data2["MTC"] << endl;
 				cout << "Outgoing voice call durations : " << data2["MOC"] << endl;
 				cout << "Incoming SMS messages : " << data2["SMS-O"] << endl;

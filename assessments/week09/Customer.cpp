@@ -23,7 +23,7 @@ using namespace std;
 		cout << callType << endl;
 		if (infoType == "1")
 			addLocalData(callType, value);
-		else if (infoType == "1")
+		else if (infoType == "2")
 			addOutsideData(callType, value);
 		else if (infoType == "3")
 			addInterNetData(callType, value);
@@ -34,33 +34,38 @@ using namespace std;
 	{
 		cout << "inside top----\n";
 		cout << callType << endl;
+		/*
 		auto it = Data1.find(callType);
 		if (it == Data1.end())
 			return;
+		*/
 		cout << "Inside " << value << endl;
 		Data1[callType] += value;
-		cout << "Inside2 " << value << endl;
+		cout << "Inside2 " << Data1[callType] << endl;
 	}
 
 	void Customer::addOutsideData(string callType, int value)
 	{
+		/*
 		auto it = Data2.find(callType);
 		if (it == Data2.end())
 			return;
-
+			*/
 		cout << "Inside " << value << endl;
 		Data2[callType] += value;
-		cout << "Inside2 " << value << endl;
+		cout << "Inside2 " << Data2[callType] << endl;
 	}
 
 	void Customer::addInterNetData(string callType, int value)
 	{
+		/*
 		auto it = internet.find(callType);
 		if (it == internet.end())
 			return;
+			*/
 		cout << "Inside " << value << endl;
 		internet[callType] += value;
-		cout << "Inside2 " << value << endl;
+		cout << "Inside2 " << internet[callType] << endl;
 	}
 
 	unordered_map<string, unsigned int > Customer::getData(string infoType)
